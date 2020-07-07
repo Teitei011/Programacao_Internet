@@ -30,145 +30,161 @@
 <body>
     <html>
 
-
-    <h2> Custom Number </h2>
-
-
-    <div ng-app="1" class="slidecontainer">
-        <input type="range" min="0" max="30" value="0" class="slider" id="min" ng-model="slider1"
-            onclick="updateChart1()">
-
-        <input type="range" min="1" max="100" value="1" class="slider" id="max" ng-model="slider2"
-            onclick="updateChart1()">
-        <br>
-
-        <button class="btn btn-primary" name="type" value="logarithmic" onclick="updateScale2Log_()">
-            Logarithmic</button>
-
-        <button class="btn btn-primary" name="type" value="linear" onclick="updateScale2Linear_()">Linear</button>
-    </div>
+    <center>
+        <h2> Custom Number </h2>
 
 
-    <script>
-        function updateChart1() {
-            let min = document.getElementById("slider1").value;
-            let max = document.getElementById("slider2").value;
+        <div class="slidecontainer">
+            <input type="number" min="0" max="30" value="0" class="slider" id="min" onchange="updateChart1()">
 
+            <input type="number" min="1" max="100" value="1" class="slider" id="max" onchange="updateChart1()">
+            <br>
 
-            console.log(min);
-            console.log(max);
+            <button class="btn btn-primary" name="type" value="logarithmic" onclick="updateScale2Log_()">
+                Logarithmic</button>
 
-            let value = sequence_numbers();
-            Chart1.data.labels = value;
-            Chart1.data.datasets[0].data = calculate_fibonacci(min, max);
-
-            Chart2.data.labels = value;
-            Chart2.data.datasets[0].data = calculate_phi(min, max);
-
-
-            Chart1.update();
-            Chart2.update();
-        }
-
-        function updateScale2Log_() {
-            Chart1.options.scales.yAxes[0] = {
-                type: 'logarithmic'
-            };
-            Chart1.update();
-
-            Chart2.options.scales.yAxes[0] = {
-                type: 'logarithmic'
-            };
-            Chart2.update();
-        }
-
-        function updateScale2Linear_() {
-            Chart1.options.scales.yAxes[0] = {
-                type: 'linear'
-            };
-            Chart1.update();
-
-            Chart2.options.scales.yAxes[0] = {
-                type: 'linear'
-            };
-            Chart2.update();
-        }
-
-        function calculate_fibonacci(number1, number2) {
-            sequence_numbers();
-            let sequence = [number1, number2];
-            sequence.push(sequence[0] + sequence[1])
-            for (let i = 1; i < iterations; i++) {
-                sequence.push(sequence[sequence.length - 1] + sequence[sequence.length -
-                    2]);
-            }
-            return sequence;
-        }
-
-        function calculate_phi(number1, number2) {
-            sequence_numbers();
-            let sequence = [];
-            sequence = calculate_fibonacci(number1, number2);
-
-            let result = [];
-
-            for (let i = 0; i < sequence.length - 1; i++) {
-                result.push(sequence[i + 1] / sequence[i]);
-            }
-            return result;
-        }
-    </script>
-
-
-
-    <div class="row">
-        <div class="col-md-6">
-            <canvas id="fibonacci1" width="800" height="400"></canvas>
-            <script>
-                var ctx = document.getElementById('fibonacci1');
-                var Chart1 = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: sequence_numbers(),
-                        datasets: [{
-                            label: 'Fibonacci Number',
-                            data: calculate_fibonacci(0, 1),
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                type: 'logarithmic',
-                                ticks: {
-                                    beginAtZero: true,
-
-                                }
-                            }]
-
-                        }
-                    }
-                });
-            </script>
+            <button class="btn btn-primary" name="type" value="linear" onclick="updateScale2Linear_()">Linear</button>
         </div>
 
-        <div class="col-md-6">
-            <canvas id="golden_number1" width="800" height="400"></canvas>
-            <script>
-                var ctx = document.getElementById('golden_number1').getContext('2d');
-                var Chart2 = new Chart(ctx, {
-                    type: 'line',
 
-                    data: {
-                        labels: sequence_numbers(),
-                        datasets: [{
-                            label: "Phi Value",
-                            data: calculate_phi(0, 1),
-                        }]
-                    }
-                })
-            </script>
+        <script>
+            let iterations = 30;
+            let fibonacci_array = [];
+
+            function updateChart1() {
+                let min = document.getElementById("min").value;
+                let max = document.getElementById("max").value;
 
 
+                let value = sequence_numbers();
+
+
+                Chart1.data.labels = value;
+
+                let data = calculate_fibonacci(min, max);
+                Chart1.data.datasets[0].data = data;
+
+                Chart2.data.labels = value;
+                Chart2.data.datasets[0].data = calculate_phi(min, max);
+
+
+                Chart1.update();
+                Chart2.update();
+            }
+
+            function updateScale2Log_() {
+                Chart1.options.scales.yAxes[0] = {
+                    type: 'logarithmic'
+                };
+                Chart1.update();
+
+                Chart2.options.scales.yAxes[0] = {
+                    type: 'logarithmic'
+                };
+                Chart2.update();
+            }
+
+            function updateScale2Linear_() {
+                Chart1.options.scales.yAxes[0] = {
+                    type: 'linear'
+                };
+                Chart1.update();
+
+                Chart2.options.scales.yAxes[0] = {
+                    type: 'linear'
+                };
+                Chart2.update();
+            }
+
+            function calculate_fibonacci(number1, number2) {
+                sequence_numbers();
+                let sequence = [Number(number1), Number(number2)];
+                sequence.push(sequence[0] + sequence[1])
+                for (let i = 1; i < iterations; i++) {
+                    buffer = Number(sequence[sequence.length - 1]) + Number(sequence[sequence.length -
+                        2]);
+                    sequence.push(buffer);
+                }
+                return sequence;
+            }
+
+
+            function calculate_phi(number1, number2) {
+
+                sequence_numbers();
+                let sequence = [];
+                sequence = calculate_fibonacci(number1, number2);
+
+                let result = [];
+
+                for (let i = 0; i < sequence.length - 1; i++) {
+                    result.push(Number(sequence[i + 1]) / Number(sequence[i]));
+                }
+                return result;
+            }
+
+
+
+            function sequence_numbers() {
+                y_axis = [];
+                for (let i = 0; i < iterations; i++) {
+                    y_axis.push(i);
+                }
+                return y_axis;
+            }
+        </script>
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="fibonacci1" width="800" height="400"></canvas>
+                <script>
+                    let ctx = document.getElementById('fibonacci1');
+                    let Chart1 = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: sequence_numbers(),
+                            datasets: [{
+                                label: 'Fibonacci Number',
+                                data: calculate_fibonacci(0, 1),
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    type: 'logarithmic',
+                                    ticks: {
+                                        beginAtZero: true,
+
+                                    }
+                                }]
+
+                            }
+                        }
+                    });
+                </script>
+            </div>
+
+            <div class="col-md-6">
+                <canvas id="golden_number1" width="800" height="400"></canvas>
+
+                <script>
+                    let ctx1 = document.getElementById('golden_number1').getContext('2d');
+                    let Chart2 = new Chart(ctx1, {
+                        type: 'line',
+
+                        data: {
+                            labels: sequence_numbers(),
+                            datasets: [{
+                                label: "Phi Value",
+                                data: calculate_phi(0, 1),
+                            }]
+                        }
+                    })
+                </script>
+
+    </center>
 </body>
 
 </html>
