@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+ <head>
+  <title>Hello Web - Processing.js Test</title>
+  <script src="processing.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+     <center>
+
+      <script type="text/javascript">
+       
+        function SendSpeed(id) {
+          var pjs = Processing.getInstanceById(id);
+          var speed = document.getElementById('speed').value;
+          pjs.velocidade(speed); 
+        }
+    
+      </script>
+   <h1>Processing.js Test</h1>
+   <p>This is my first Processing.js web-based sketch:</p>
+   <canvas id="circuferencia" data-processing-sources="circuferencia.pde"></canvas>
+
+  <input type="textfield" value="my text" id="speed">
+  <button type="button" onclick="SendSpeed('circuferencia')">place</button>
+
+</center>
+
+</body>
+</html>

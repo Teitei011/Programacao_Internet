@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+    
+    <title>Celular ou PCmouse</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('screenSize', function($scope) {
+          $scope.screenW = function() {
+            return window.innerWidth;  
+          }
+        });
+    </script> 
+  </head>
+  <body>
+    <!--
+    <h1>Processing.js Test</h1>
+    <p>This is my first Processing.js web-based sketch:</p>
+    -->
+   
+    <div ng-app="myApp" ng-controller="screenSize">
+    <div ng-if="screenW()>900">
+        <p> Esta versão é para pc</p>
+        <canvas data-processing-sources="rotacionando.pde"></canvas>
+    </div> 
+    <div ng-if="screenW()<900">  
+        <p> Esta versão é para celular </p>  
+        <canvas data-processing-sources="circuferencia.pde"></canvas>
+    </div> 
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ping Server</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery-slim.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <center>
+        <p> Servidor de Ping </p>
+        <form method="GET" action="../cgi-bin/ping_server.cgi">
+            <label for="fname"> Entre com o ip ou dominio: </label><br>
+            <input type="text" id="fname" name="url_form" value="8.8.8.8"><br>
+            <input type="hidden" name="nda" value="1">
+            <input type="submit" value="Submit">
+    </center>
+
+
+</body></html>

@@ -1,0 +1,38 @@
+
+    
+
+
+    <!DOCTYPE html>
+  <html>
+ <head>
+  <title>Celular ou pc?</title>
+  <script src="processing.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('screenSize', function($scope) {
+      $scope.screenW = function() {
+        return window.innerWidth;  
+      }
+    });
+</script> 
+
+</head>
+<body  ng-app="">
+    <center>
+
+    <h1>Celular ou pc? </h1>
+    <p>This is programa checks the screen size:</p>
+    
+    <div ng-if="screenW()>900">
+        <canvas  id="quadrado" data-processing-sources="rotacionando.pde"></canvas>
+    </div>
+    <div ng-if="screenW()<900">
+        <canvas  id="quadrado" data-processing-sources="circuferencia.pde"></canvas>
+    </div>
+
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+# Fibonacci
+
+1. Utilizando bootstrap, php, processingjs e chartjs, desenvolve uma página sobre a séries de fibonacci. A página deve apresentar uma explicação sobre a série, sobre sua história e sobre phi e a razão aúrea. Na página deve ser apresentado o cálculo do número phi (razão áurea). Deve ser apresentado um gráfico ao usuário mostrando como evolui o valor de phi para cada iteração da série. Deve apresentar também gráficos sobre a sequencia, bem como os valores da sequencia. Ambos devem ter interação com o usuário via web.
+
+2. A página deve ainda apresentar ainda a sequencia de Fibonacci, com valores informados pelo usário, ou seja, como fica a sequência, se ao invés de iniciar com 0 e 1, a sequencia iniciar com um par de números informados pelo usuários, por exemplo 7 e 10. A sequencia com as sementes informadas pelo usuári devem apresentar também o cálculo de phi e também apresentar gráficos
+
+# TODO LIST
+
+## Texto
+
+- [x] Explicação da série
+- [x] História 
+- [ ] Phi
+- [ ] Razão Aúrea
+- [ ] Cálculo do número phi
+
+
+## Gráficos
+
+- [ ]  Valores das sequência 
+- [ ] Gráfico mostrando como evolui o valor de phi para cada iteração da série
+- [ ]  Ambas devem ser interativas
+- [ ]  Sequência de Fibonacci com os valores dados pelo usuário
+
+## Texto
+
+## História
+
+Na matemática, a Sucessão de Fibonacci (ou Sequência de Fibonacci), é uma sequência de números inteiros, começando normalmente por 0 e 1, na qual, cada termo subsequente corresponde à soma dos dois anteriores. A sequência recebeu o nome do matemático italiano Leonardo de Pisa, mais conhecido por Fibonacci, que descreveu, no ano de 1202, o crescimento de uma população de coelhos, a partir desta. Esta sequência já era, no entanto, conhecida na antiguidade.
+
+
+Proporção áurea ou razão áurea consiste numa constante real algébrica irracional. É representada pela divisão de uma reta em dois segmentos (a e b), sendo que quando a soma desses segmentos é dividida pela parte mais longa, o resultado obtido é de aproximadamente 1.61803398875. Este valor é chamado de "número de Ouro".
+
+
+## Fibonacci 
+xn = xn−1 + xn−2
+
+# Phi
+
+Tendendo ao infinito
+phi = X_(n+1) / X_n

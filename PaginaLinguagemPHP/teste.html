@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Programação Voltada a Internet - IFSC - USP - Odemir Bruno - turma 2020</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">PVI</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="exercicios.html">Exercícios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post_html_bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>PHP</h1>
+            <h2 class="subheading">Hypertext Preprocessor - básico 1</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 mx-auto">
+
+          <h2 class="section-heading">Exemplos de introdução à linguagem PHP:</h2><br>
+		<h3>Exemplo 27:</h3>
+                <xmp><html><body>
+  <form action="formvet.php" method="POST">
+    Nome: <input type="text" name="pessoal[]"><br>
+    E-mail: <input type="text" name="pessoal[]"><br>
+    Pai: <input type="text" name="familiar[]"><br>
+    Mãe: <input type="text" name="familiar[]"><br>
+    <input type="submit" value="Enviar">
+  </form>
+</body></html>
+</xmp>                <h4>Rodando:</h4>$urlrodando
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_27.php" height="400" width="600"></iframe>
+                <br><br>
+
+                <h3>Exemplo 28:</h3>
+                <xmp><html>
+<body>
+  O nome fornecido foi:
+  <b>
+    <?php $pessoal = $_POST['pessoal']; $familiar = $_POST['familiar'];
+    echo($pessoal[0]);
+    ?>
+  </b>, o e-mail fornecido foi:
+  <b>
+    <?php
+      echo($pessoal[1]);
+    ?>
+  </b>
+    , o nome do pai é:
+  <b>
+    <?php
+      echo($familiar[0]);
+      ?>
+    </b>
+    e o nome da mãe é:
+    <b>
+      <?php
+        echo($familiar[1]);
+      ?>
+    </b>
+</body>
+</html>
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_28.php" height="400" width="600"></iframe>
+                <br><br>
+
+                <h3>Exemplo 29:</h3>
+                <xmp><html>
+<body>
+  <form action="frmidtxt.php" method="POST">
+    Nome: <input type="text" name="pessoal[nome]"><br>
+    E-mail: <input type="text" name="pessoal[email]"><br>
+    Pai: <input type="text" name="familiar[pai]"><br>
+    Mãe: <input type="text" name="familiar[mae]"><br>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_29.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 30:</h3>
+                <xmp><html>
+<body>
+  O nome fornecido foi:
+  <b>
+    <?php
+      $pessoal = $_POST['pessoal']; $familiar = $_POST['familiar'];
+      echo($pessoal["nome"]);
+    ?>
+    </b>
+    , o e-mail fornecido foi:
+    <b>
+    <?php
+      echo($pessoal["email"]);
+    ?>
+    </b>
+    , o nome do pai é:
+    <b>
+      <?php
+        echo($familiar["pai"]);
+      ?>
+    </b>
+      e o nome da mãe é:
+      <b>
+      <?php
+        echo($familiar["mae"]);
+      ?>
+        </b>
+</body>
+</html>
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_30.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 31:</h3>
+                <xmp><html>
+<body>
+  <form action="frmchkbx.php" method="POST">
+    Nome: <input type="text" name="nome"><br>
+    E-mail: <input type="text" name="email"><br>
+    <input type="checkbox" name="requer_info" value="sim">
+      Desejo receber infomações via e-mail.<br>
+    <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_31.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 32:</h3>
+                <xmp><html>
+<body>
+  <?php
+    if(isset($_POST['requer_info'])) {
+      echo("Solicitou envio de informações.");
+    } else {
+      echo("Não solicitou envio de informações.");
+    }
+    ?>
+</body>
+</html>
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_32.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		 <h3>Exemplo 33:</h3>
+                <xmp><html>
+<body>
+  <form action="frmradbt.php" method="POST">
+    Nome: <input type="text" name="nome"><br>
+    E-mail: <input type="text" name="email"><br>
+    <input type="radio" name="estado_civil" value="solteiro"checked> Solteiro
+    <input type="radio" name="estado_civil" value="casado">Casado<br>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_33.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+
+		<h3>Exemplo 34:</h3>
+                <xmp><html>
+<body>
+  <?php
+  if ($_POST['estado_civil']=="solteiro") {
+    echo("O usuário é solteiro.");
+  } else {
+    echo("O usuário é casado.");
+  }
+  ?>
+</body>
+</html>
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_34.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 35:</h3>
+                <xmp>$valor = "R\$35,00"; // Armazena "R$35,00" dentro da STRING $valor
+$descricao = "Esta texto possui uma \n quebra de linha.";
+$Peter = "Princípio de Peter: \"Numa hierarquia todo empregado tende asubir até atingir seu nível de incompetência\"."; //Texto com uso de aspas
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_35.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 36:</h3>
+                <xmp>$b = 5; $a = 5;
+$b = ($a = 5);
+$b = $a = 5
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_36.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 37:</h3>
+                <xmp>$a = 1; //a vale 1.
+$a++;//a passa a valer 2.
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_37.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 38:</h3>
+                <xmp>$a = 1;
+$b = $a++;
+$c = 1;
+$d = ++$c;
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_38.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 39:</h3>
+                <xmp>$a = 1; //Atribuição simples
+$b = $a--; //O valor de $a é copiado para $b e depois $a recebe $a-1
+$c = --$a; //$a recebe $a-1 e depois $c recebe o mesmo valor de $a
+$b +=3; //$b recebe $b+35$c -=3; //
+$b recebe $b-36$b *=6; //
+$b recebe $b*67$c /=6; //
+$c recebe $c/68$b %=2; //
+$b recebe o resto da divisão de $b por 2.9
+$i = $j ? $k : $q; */ Eis aqui uma atribuição mais complexa e mais poderosa.Se $j for verdadeira, $i recebe $k, senão $i recebe $q.
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_39.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 40:</h3>
+                <xmp>$x = 10; $y = 2;
+$a = $x + $y; //$a = 12; Soma
+$a = $x - $y; //$a = 8; Subtração
+$a = $x * $y; //$a = 20; Multiplicação
+$a = $x / $y; //$a = 5; Divisão
+$a = $x % $y; //$a = 0; Resto da divisão
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_40.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 41:</h3>
+                <xmp>$x = “Alô “;
+$y = “você!”;
+$z = $x . $y;
+echo($z); //mostra “Alô você!”
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_41.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 42:</h3>
+                <xmp>$x = 89; $y = 66; $z=2
+$a = $x & $y; // operando AND bit a bit - $a recebe 64
+$a = $x | $y; //operando OR bit a bit - $a recebe 91
+$a = $x ^ $y; //operando XOR bit a bit -$a recebe 27
+$a = ~$x; //operando NOT - $a recebe 38
+$a = $x << $z; //deslocamento à esquerda - $a recebe 356
+$a = $x >> $z; //deslocamento à direita - $a recebe 22
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_42.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 43:</h3>
+                <xmp>$x = TRUE; $y = FALSE;
+$a = $x and $y; //$a = FALSE
+$a = $x && $y; //$a = FALSE (&& é equivalente a and)
+$a = $x or $y; //$a = TRUE
+$a = $x || $y; //$a = TRUE (|| é equivalente a or)
+$a = $x xor $y; //$a = TRUE
+$a = !$y; //$a = TRUE
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_43.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 44:</h3>
+                <xmp>$x = 10; $y = 2;
+$a = $x == $y; //$a = FALSE;
+$a = $x != $y; //$a = TRUE;
+$a = $x > $y; //$a = TRUE;
+$a = $x < $y; //$a = FALSE;
+$a = $x >= $y; //$a = TRUE;
+$a = $x <= $y; //$a = FALSE;
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_44.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 45:</h3>
+                <xmp>if (condição){
+  Comando 1;
+  Comando 2;
+  Comando 3;
+  Comando 4;
+}
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_45.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 46:</h3>
+                <xmp>if (condição) :
+  instrução1;
+  instrução2;
+  instrução3;
+  instrução4;
+endif;
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_46.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 47:</h3>
+                <xmp>if (<condição>)
+  instrução 1
+else
+  instrução 2
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_47.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 48:</h3>
+                <xmp>if (<condição>)
+  instrução 1
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_48.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 49:</h3>
+                <xmp>if (d$>0)
+  if ($a>$b)
+    $a=$b;
+  else
+    $b=$a;
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_49.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 50:</h3>
+                <xmp>if (d$>0)
+  if ($a>$b)
+    $a=$b;
+else
+  $b=$a
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_50.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+                <h3>Exemplo 51:</h3>
+                <xmp>if ($a>$b) {
+  print "a é maior que b";
+  $c=a;
+} else {
+  print "a é menor que b";
+  $c=b;
+}
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_51.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 52:</h3>
+                <xmp>if ($a>$b) :
+  print "a é maior que b";
+  $c=a;4
+else
+  print "a é menor que b";
+  $c=b;
+endif
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_52.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+		<h3>Exemplo 53:</h3>
+                <xmp>if(condição) :
+  instrução
+elseif(condição)
+  instrução
+elseif(condição)
+  instrução
+else
+  instrução
+</xmp>                <h4>Rodando:</h4>
+                <iframe src="http://fourier.ifsc.usp.br/~fabio/exerciciosPHP/lingPHP/2_53.php" height="400" width="600"></iframe>
+
+                <br><br>
+
+          	<h3>Exemplo 54:</h3>
+      		<xmp>Unable to open file!

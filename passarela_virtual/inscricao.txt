@@ -1,0 +1,56 @@
+Candidata: <b>Teste1</b><br>
+Natural de: <b>Nacional</b><br>
+Idade: <b>9999999 anos</b><br>
+Altura: <b>165 cm</b><br>
+Prato predileto: <b>Comida1</b><br>
+Segue/Pretende seguir a carreira de: <b>Profissão1</b><br>
+Veja as fotografias:<br>
+<a href="./.294dd931f2a2f9d5a3b97ce1a7d08388.jpg">294dd931f2a2f9d5a3b97ce1a7d08388.jpg</a><br>
+<a href="./.95838276_2559300210999705_8589062833897996288_n-0.jpg">95838276_2559300210999705_8589062833897996288_n-0.jpg</a><br>
+<a href="./.PIA18164_hires.jpg">PIA18164_hires.jpg</a><br>
+<a href="./.95838276_2559300210999705_8589062833897996288_n-1.jpg">95838276_2559300210999705_8589062833897996288_n-1.jpg</a><br>
+Para votar nesta candidata, clique <a href="candidata1.php">AQUI</a>.
+<br>
+<hr>
+Candidata: <b>Teste1</b><br>
+Natural de: <b>Nacional</b><br>
+Idade: <b>9999999 anos</b><br>
+Altura: <b>165 cm</b><br>
+Prato predileto: <b>Comida1</b><br>
+Segue/Pretende seguir a carreira de: <b>Profissão1</b><br>
+Veja as fotografias:<br>
+<a href="./.294dd931f2a2f9d5a3b97ce1a7d08388.jpg">294dd931f2a2f9d5a3b97ce1a7d08388.jpg</a><br>
+<a href="./.95838276_2559300210999705_8589062833897996288_n-0.jpg">95838276_2559300210999705_8589062833897996288_n-0.jpg</a><br>
+<a href="./.PIA18164_hires.jpg">PIA18164_hires.jpg</a><br>
+<a href="./.95838276_2559300210999705_8589062833897996288_n-1.jpg">95838276_2559300210999705_8589062833897996288_n-1.jpg</a><br>
+Para votar nesta candidata, clique <a href="candidata2.php">AQUI</a>.
+<br>
+<hr>
+Candidata: <b>Teste1</b><br>
+Natural de: <b>Nacional</b><br>
+Idade: <b>9999999 anos</b><br>
+Altura: <b>165 cm</b><br>
+Prato predileto: <b>Comida1</b><br>
+Segue/Pretende seguir a carreira de: <b>Profissão1</b><br>
+Veja as fotografias:<br>
+<a href="./294dd931f2a2f9d5a3b97ce1a7d08388.jpg">294dd931f2a2f9d5a3b97ce1a7d08388.jpg</a><br>
+<a href="./95838276_2559300210999705_8589062833897996288_n-0.jpg">95838276_2559300210999705_8589062833897996288_n-0.jpg</a><br>
+<a href="./PIA18164_hires.jpg">PIA18164_hires.jpg</a><br>
+<a href="./95838276_2559300210999705_8589062833897996288_n-1.jpg">95838276_2559300210999705_8589062833897996288_n-1.jpg</a><br>
+Para votar nesta candidata, clique <a href="candidata3.php">AQUI</a>.
+<br>
+<hr>
+Candidata: <b>Teste1</b><br>
+Natural de: <b>Nacional</b><br>
+Idade: <b>9999999 anos</b><br>
+Altura: <b>165 cm</b><br>
+Prato predileto: <b>Comida1</b><br>
+Segue/Pretende seguir a carreira de: <b>Profissão1</b><br>
+Veja as fotografias:<br>
+<a href="./294dd931f2a2f9d5a3b97ce1a7d08388.jpg">294dd931f2a2f9d5a3b97ce1a7d08388.jpg</a><br>
+<a href="./95838276_2559300210999705_8589062833897996288_n-0.jpg">95838276_2559300210999705_8589062833897996288_n-0.jpg</a><br>
+<a href="./PIA18164_hires.jpg">PIA18164_hires.jpg</a><br>
+<a href="./95838276_2559300210999705_8589062833897996288_n-1.jpg">95838276_2559300210999705_8589062833897996288_n-1.jpg</a><br>
+Para votar nesta candidata, clique <a href="candidata4.php">AQUI</a>.
+<br>
+<hr>

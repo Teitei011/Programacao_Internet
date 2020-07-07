@@ -1,0 +1,107 @@
+<?php
+   $nome = $_POST['nome'];
+   $naturalidade = $_POST['naturalidade'];
+   $idade = $_POST['idade'];
+   $altura = $_POST['altura'];
+   $prato = $_POST['prato'];
+   $profissao = $_POST['profissao'];
+   $foto1_name = $_FILES['foto1']['tmp_name']; $foto1 = $_FILES['foto1']['name']; 
+   $foto2_name = $_FILES['foto2']['tmp_name']; $foto2 = $_FILES['foto2']['name'];
+   $foto3_name = $_FILES['foto3']['tmp_name']; $foto3 = $_FILES['foto3']['name'];
+   $foto4_name = $_FILES['foto4']['tmp_name']; $foto4 = $_FILES['foto4']['name'];
+   
+   if (empty($nome) or empty($naturalidade) or empty($idade) or empty($altura) or empty($prato) or empty($profissao) or empty($foto1_name) or empty($foto2_name) or empty($foto3_name) or empty($foto4_name)) { ?> 
+      <html>
+         <title>Passarela</title>
+         <body bgcolor="#FFFFFF">
+            O preenchimento de TODOS os campos do formulário de inscrição é obrigatório. Por favor, <a href="javascript:history.back(1)">volte</a> e verifique seus dados.
+         </body>
+      </html>
+      <? } else {
+         $tmp= $foto1_name;
+         move_uploaded_file($tmp,$foto1);
+         $tmp = $foto2_name;
+         move_uploaded_file($tmp,$foto2);
+         $tmp = $foto3_name;
+         move_uploaded_file($tmp,$foto3);
+         $tmp = $foto4_name;
+         move_uploaded_file($tmp,$foto4);
+
+         if (!file_exists("inscricao.txt")) {
+            $n_girls = fopen("n_girls.txt","w");
+            fwrite($n_girls,"0");
+            fclose($n_girls);
+            }
+
+         $n_girls = fopen("n_girls.txt","r");
+         $n = fread($n_girls,12);
+         fclose($n_girls);
+         $n++;
+
+         $n_girls = fopen("n_girls.txt","w");
+         fwrite($n_girls,$n);
+         fclose($n_girls);
+
+         $cand_id = fopen($n.".php","w");
+         fwrite($cand_id,"0");
+         fclose($cand_id);
+
+         $cand = fopen("candidata".$n.".php","w");
+         fwrite($cand,"<html>\n<body bgcolor=\"#FFFFFF\">\n");
+         fwrite($cand,"<?php\n");
+         fwrite($cand,"   \$cand_id = fopen(\"$n.php\",\"r\");\n");
+         fwrite($cand,"   \$n_votos = fread(\$cand_id,12);\n");
+         fwrite($cand,"   fclose(\$cand_id);\n");
+         fwrite($cand,"   \$n_votos++;\n");
+         fwrite($cand,"   \$cand_id = fopen(\"$n.php\",\"w\");\n");
+         fwrite($cand,"   fwrite(\$cand_id,\$n_votos);\n");
+         fwrite($cand,"   fclose(\$cand_id);\n");
+         fwrite($cand,"?>\n");
+         fwrite($cand,"      Obrigado por votar numa de nossas beldades<br><br>\n");
+         fwrite($cand,"<a href=\"passaini.htm\">Voltar</a>\n");
+         fwrite($cand,"   </body>\n</html>");
+         fclose($cand);
+
+         $arq = fopen("inscricao.txt","a");
+         fwrite($arq,"Candidata: <b>".$nome."</b><br>\n");
+         fwrite($arq,"Natural de: <b>".$naturalidade."</b><br>\n");
+         fwrite($arq,"Idade: <b>".$idade." anos</b><br>\n");
+         fwrite($arq,"Altura: <b>".$altura." cm</b><br>\n");
+         fwrite($arq,"Prato predileto: <b>".$prato."</b><br>\n");
+         fwrite($arq,"Segue/Pretende seguir a carreira de: <b>".$profissao."</b><br>\n");
+         fwrite($arq,"Veja as fotografias:<br>\n");
+         fwrite($arq,"<a href=\"/.$foto1\">".$foto1."</a><br>\n");
+         fwrite($arq,"<a href=\"u/.$foto2\">".$foto2."</a><br>\n");
+         fwrite($arq,"<a href=\"./.$foto3\">".$foto3."</a><br>\n");
+         fwrite($arq,"<a href=\"./.$foto4\">".$foto4."</a><br>\n");
+         fwrite($arq,"Para votar nesta candidata, clique <a href=\"candidata".$n.".php\">AQUI</a>.\n");
+         fwrite($arq,"<br>\n");
+         fwrite($arq,"<hr>\n");
+         fclose($arq);
+
+         echo("<html>\n<title>Passarela Virtual</title>\n<head>\n<center>\n");
+         echo("<h1>Bem vindo à Passarela Virtual</h1>\n");
+         echo("<h3>Conheça nossas candidatas e dê o seu voto!</h3>\n");
+         echo("<script>\n");
+         echo("<!--- \n");
+         echo("function NovaJanela(fig) {\n");
+         echo("   window.open(fig,'passarela');\n");
+         echo("}\n");
+         echo("--->\n");
+         echo("</script>\n");
+         echo("</head><body bgcolor=\"#FFFFFF\">");
+         $tmp = file("inscricao.txt");
+         $idx = 1;
+         foreach($tmp as $linha) {
+            if ($linha=="<br>\n") {
+               $cand_id = fopen("$idx.php","r");
+               $n_votos = fread($cand_id,12);
+               fclose($cand_id);
+               echo("<br>Votos Recebidos até o momento: ".$n_votos."\n");
+               $idx++;
+               }
+            else echo($linha);
+            }
+         echo("</body></center></html>");
+      }
+?>

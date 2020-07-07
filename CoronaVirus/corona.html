@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="corona.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<head>
+<title>X-Ray AI</title>
+</head>
+
+<body>
+
+<center> 
+   
+<h1> Covid19 AI</h1> 
+
+   
+<img src="example.png" alt="Covid19" width="250">
+
+</center>
+
+
+ <br>
+ <center>
+ <form method="post" enctype="multipart/form-data" action="image_upload.php">
+   <div class="upload-btn-wrapper">
+      <b>Put your X-Ray image here:</b><br> <input name="myfile" type="file">
+   <br/>
+</div>
+   <input type="submit" name="submit" value="Submit" />
+</form>
+ </center>
+
+<p> This site aims to diagnose covid19 cases by analysing the X-Ray images, the image that you upload in this site go to our database to continue to improve the AI</p> 
+
+<p> Bear in mind that you should not use this as  a definity prove, It's always better to have more reliable source of data to make this kind of decision, you may only use this as last resort</p>
+
+</body>
+</html>

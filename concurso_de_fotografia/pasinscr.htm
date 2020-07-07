@@ -1,0 +1,73 @@
+<html>
+   <head>
+      <title>Passarela</title>
+   </head>
+   <body bgcolor="#FFFFFF">
+      <b>Formulário para Inscrição:</b><br><br>
+      Coloque seus dados, selecione 4 fotografias no formato <b>JPG</b>
+      e clique em "Enviar".<br>
+      <font color="#FF0000">(O preenchimento de TODOS os campos é obrigatório).</font><br>
+      <form action="pasinscr.php" method="POST" enctype="multipart/form-data">
+         <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+         <table border="1">
+            <tr>
+               <td>
+                  Nome: <input type="text" name="nome" value="" size="40">
+               </td>
+               <td>
+                  Naturalidade: <input type="text" name="naturalidade" value="">
+               </td>
+            <tr>
+               <td>
+                  Idade: <input type="text" name="idade" size="3" value=""> anos
+               </td>
+               <td>
+                  Altura: <input type="text" name="altura" size="3" value=""> cm
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" align="center">
+                  Responda as seguintes perguntas:
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  Qual o seu prato predileto?<br>
+                  <textarea rows="2" cols="30" name="prato" value=""></textarea>
+               </td>
+               <td>
+                  Qual a sua profissão ou que profissão pretende seguir?<br>
+                  <textarea rows="2" cols="30" name="profissao" value=""></textarea>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" align="center">
+                  Selecione abaixo 4 fotos no formato <b>.JPG<b>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="file" name="foto1">
+               </td>
+               <td>
+                  <input type="file" name="foto2">
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="file" name="foto3">
+               </td>
+               <td>
+                  <input type="file" name="foto4">
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" align="center">
+                  <input type="submit" value="Enviar">
+               </td>
+            </tr>
+         </table>
+
+      </form>
+   </body>
+</html>
