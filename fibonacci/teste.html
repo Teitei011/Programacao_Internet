@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Sequência de Fibonacci</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <html lang="en-US">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body>
+    <html>
+
+
+    <h2> Custom Number </h2>
+
+
+    <div ng-app="1" class="slidecontainer">
+        <input type="range" min="0" max="30" value="0" class="slider" id="min" ng-model="slider1"
+            onclick="updateChart1()">
+
+        <input type="range" min="1" max="100" value="1" class="slider" id="max" ng-model="slider2"
+            onclick="updateChart1()">
+        <br>
+
+        <button class="btn btn-primary" name="type" value="logarithmic" onclick="updateScale2Log_()">
+            Logarithmic</button>
+
+        <button class="btn btn-primary" name="type" value="linear" onclick="updateScale2Linear_()">Linear</button>
+    </div>
+
+
+    <script>
+        function updateChart1() {
+            let min = document.getElementById("slider1").value;
+            let max = document.getElementById("slider2").value;
+
+
+            console.log(min);
+            console.log(max);
+
+            let value = sequence_numbers();
+            Chart1.data.labels = value;
+            Chart1.data.datasets[0].data = calculate_fibonacci(min, max);
+
+            Chart2.data.labels = value;
+            Chart2.data.datasets[0].data = calculate_phi(min, max);
+
+
+            Chart1.update();
+            Chart2.update();
+        }
+
+        function updateScale2Log_() {
+            Chart1.options.scales.yAxes[0] = {
+                type: 'logarithmic'
+            };
+            Chart1.update();
+
+            Chart2.options.scales.yAxes[0] = {
+                type: 'logarithmic'
+            };
+            Chart2.update();
+        }
+
+        function updateScale2Linear_() {
+            Chart1.options.scales.yAxes[0] = {
+                type: 'linear'
+            };
+            Chart1.update();
+
+            Chart2.options.scales.yAxes[0] = {
+                type: 'linear'
+            };
+            Chart2.update();
+        }
+
+        function calculate_fibonacci(number1, number2) {
+            sequence_numbers();
+            let sequence = [number1, number2];
+            sequence.push(sequence[0] + sequence[1])
+            for (let i = 1; i < iterations; i++) {
+                sequence.push(sequence[sequence.length - 1] + sequence[sequence.length -
+                    2]);
+            }
+            return sequence;
+        }
+
+        function calculate_phi(number1, number2) {
+            sequence_numbers();
+            let sequence = [];
+            sequence = calculate_fibonacci(number1, number2);
+
+            let result = [];
+
+            for (let i = 0; i < sequence.length - 1; i++) {
+                result.push(sequence[i + 1] / sequence[i]);
+            }
+            return result;
+        }
+    </script>
+
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <canvas id="fibonacci1" width="800" height="400"></canvas>
+            <script>
+                var ctx = document.getElementById('fibonacci1');
+                var Chart1 = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: sequence_numbers(),
+                        datasets: [{
+                            label: 'Fibonacci Number',
+                            data: calculate_fibonacci(0, 1),
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                type: 'logarithmic',
+                                ticks: {
+                                    beginAtZero: true,
+
+                                }
+                            }]
+
+                        }
+                    }
+                });
+            </script>
+        </div>
+
+        <div class="col-md-6">
+            <canvas id="golden_number1" width="800" height="400"></canvas>
+            <script>
+                var ctx = document.getElementById('golden_number1').getContext('2d');
+                var Chart2 = new Chart(ctx, {
+                    type: 'line',
+
+                    data: {
+                        labels: sequence_numbers(),
+                        datasets: [{
+                            label: "Phi Value",
+                            data: calculate_phi(0, 1),
+                        }]
+                    }
+                })
+            </script>
+
+
+</body>
+
+</html>
