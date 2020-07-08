@@ -204,12 +204,13 @@
                 parte mais longa, o resultado obtido é de aproximadamente 1.61803398875. Este valor é
                 chamado de
                 "número
-                de Ouro". É interessante de se notar que independente dos valores iniciais a constante de ouro é (como o próprio nome diz) constante, o que pode ser visto pelo gráficos abaixo. 
+                de Ouro".
             </p>
 
             <center>
 
-
+                <p>Os gráficos abaixo mostram como a constante de fibonacci se comporta tanto em como elas crescem tanto
+                    quanto convergem para o número de ouro. </p>
 
                 <h2> Fibonacci Number </h2>
 
@@ -338,7 +339,7 @@
                                 options: {
                                     scales: {
                                         yAxes: [{
-                                            type: 'logarithmic',
+                                            type: 'linear',
                                             ticks: {
                                                 beginAtZero: true,
 
@@ -381,7 +382,14 @@
             <br>
             <br>
             <center>
-                <h2> Custom Number </h2>
+
+                <h2> Customização dos valores iniciais</h2>
+                
+                <p> É interessante de notar que independente dos valores iniciais a constante de ouro é (como o
+                    próprio nome diz) constante, o que pode ser visto pelo gráficos abaixo.
+                </p>
+
+                
 
                 <div class="slidecontainer">
                     <input type="number" min="0" max="30" value="0" class="slider" id="min" onchange="updateChart1()">
