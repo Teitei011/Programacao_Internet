@@ -15,7 +15,7 @@
 
     $senhaCriptografada = sha1($senha);
 
-    $db->exec("INSERT INTO Anunciante (nome, email, senha, telefone) VALUES ('$nome', '$email', '$senhaCriptografada', '$telefone');");
+   $db->exec("INSERT INTO Artist (name, email, senha) VALUES ('$nome', '$email', '$senhaCriptografada';");
     $db->close();
 ?> 
 
@@ -33,7 +33,6 @@
       echo "<p>Nome: $nome</p>";
       echo "<p>Email: $email</p>";
       echo "<p>Senha: $senhaCriptografada</p>";
-      echo "<p>Telefone: $telefone</p>";
     ?>
 
     <p><a href="index.html">Clique aqui para voltar ao menu inicial</a></p> </center>

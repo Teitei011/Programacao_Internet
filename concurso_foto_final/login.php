@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Classificados - home page</title>
+<title>Concurso de Fotografia</title>
 </head>
 <body  TEXT="#000000" LINK="#0000ff" bgcolor="#FFFFFF">
 <BASEFONT SIZE=4>
@@ -19,7 +19,7 @@
 
         $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-        $result = $db->query("SELECT senha FROM Anunciante WHERE nome='$usuario';");
+        $result = $db->query("SELECT senha FROM Artista WHERE nome='$usuario';");
 
         $row = $result->fetchArray();
         if ($row[0] == sha1($senha)){
@@ -34,7 +34,7 @@
 
         } else{
             echo "<center><h1>Senha incorreta</h1>";
-            echo "<p><a href='./login.html'> Clique aqui para tentar novamente</a> </p></center>";
+            echo "<p><a href='login.html'> Clique aqui para tentar novamente</a> </p></center>";
         }
 
         $db->close();
