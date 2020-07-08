@@ -33,6 +33,6 @@
       echo "<p>Senha: $senhaCriptografada</p>";
     ?>
 
-    <p><a href="index.html">Clique aqui para voltar ao menu inicial</a></p> </center>
+    <p><a href="adicionar_fotos.php">Clique aqui para adicionar as suas fotos</a></p> </center>
 </body>
 </html>
