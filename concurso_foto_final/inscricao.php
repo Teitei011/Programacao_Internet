@@ -6,14 +6,14 @@
   $_SESSION['token'] = $token;
 
 
-  $nome = $_GET["nome"];
+  $name = $_GET["nome"];
   $email = $_GET["email"];
   $senha = $_GET["senha"];
 
   $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
   $senhaCriptografada = sha1($senha);
-  $db->exec("INSERT INTO Artista (name, email, senha) VALUES ('$nome', '$email', '$senhaCriptografada';");
+  $db->exec("INSERT INTO Artista (nome, email, senha) VALUES ('$name', '$email', '$senhaCriptografada';");
   $db->close();
 ?> 
 
