@@ -3,25 +3,33 @@
 <head>
 <meta charset="utf-8" />
 <title>Cadastro de Usuário</title>
+<link href="css/login.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
 </head>
 
-<body background="images/backclass1.gif" bgcolor="#FFFFFF"
-  vlink="#FF0000" alink="#FF00FF" leftmargin="25">
+<body >
 
-  <p align="center">&nbsp;</p>
-  <p align="center"><img src="images/titclass.gif" width="250"
-  height="155"></p>
+    <div class="container">
 
-  <p align="center">&nbsp;</p>
+  <div id="fullscreen_bg" class="fullscreen_bg">
 
-    <center> <h1> Coloque aqui suas informações de cadastro: </h1>
-        <form action="/~stefantcleal/concurso_foto_final/inscricao.php" method="GET">
-            Nome: <input type="text" name="nome"><br>
-            Email: <input type="text" name="email"><br>
-            Senha: <input type="password"  name="senha"><br>
-            <input type="submit">
-        </form> 
-    </center>   
+    <div class="container" action="/~stefantcleal/concurso_foto_final/inscricao.php">
+        <form class="form-signin">
+            <h1 class="form-signin-heading text-muted">Inscreva-se</h1>
+            <input type="text" name="nome" class="form-control" required="" autofocus="">
+            <input type="text" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
+            <input type="password"  name="senha"class="form-control" placeholder="Password" required="">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Submit
+            </button>
+        </form>
+
+    </div>
+
+
+
+</div>
 </body>
 
 </html>
