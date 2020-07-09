@@ -1,4 +1,4 @@
-<?php session_abort() ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">

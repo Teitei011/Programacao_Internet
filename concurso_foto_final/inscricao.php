@@ -14,6 +14,13 @@
 
   $senhaCriptografada = sha1($senha);
   $db->exec("INSERT INTO Artista (nome, email, senha) VALUES ('$name', '$email', '$senhaCriptografada';");
+  
+  $result = $db->query("SELECT ID FROM Artista WHERE nome='$name';");
+  $result = $result->fetchArray();
+  
+  $ID = $result["ID"];
+  $_SESSION['id_artista'] = $ID;
+
   $db->close();
 ?> 
 
