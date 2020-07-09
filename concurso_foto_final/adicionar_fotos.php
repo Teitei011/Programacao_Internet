@@ -23,7 +23,7 @@
   </p>
         Título: <input type="text" name=titulo>
         Descricao: <input type="text" name=descricao>
-        <input type="file" name="foto1">
+        <input type="file" name="foto">
         <input type="submit" name="Submit" value="Enviar"> 
 
     </form>
