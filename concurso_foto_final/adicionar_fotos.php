@@ -23,10 +23,10 @@
           <option value="2">Outros</option>
         </select>
       </p>
-      
-      Título: <input type="text" name=titulo>
-      Descricao: <input type="text" name=descricao>
-      <input type="file" name="foto">
+      <br>
+      Título: <input type="text" name=titulo><br>
+      Descricao: <input type="text" name=descricao><br>
+      <input type="file" name="foto"><br>
       <input type="submit" name="Submit" value="Enviar">
 
     </form>
