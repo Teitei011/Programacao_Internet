@@ -19,18 +19,16 @@
 
         $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-        $result = $db->query("SELECT senha FROM Artista WHERE nome='$usuario';");
+        $result = $db->query("SELECT * FROM Artista WHERE nome='$usuario';");
 
         $row = $result->fetchArray();
-        if ($row[0] == sha1($senha)){
+        if ($row['senha'] == sha1($senha)){
             $_SESSION['token'] = $token;
-            $_SESSION['usuario'] = $usuario;
-            $_SESSION['senha'] = $senha;
+            $_SESSION['artista_id'] = $row["ID"];
 
 
             echo "<center><h1>Usuário autorizado</h1>";
-            echo "<a href='todos_os_anuncios.php'>Clique nesse link para visualizar os anuncios!</a>";
-            echo "<br><a href='./modificar_anuncios.php'>Ou clique nesse link para adicionar seus anuncios!</a>";
+            echo "<a href='todas_as_fotos.php'>Clique nesse link para visualizar os anuncios!</a>";
 
         } else{
             echo "<center><h1>Senha incorreta</h1>";
@@ -38,9 +36,6 @@
         }
 
         $db->close();
-
-
     ?>
-
 </body>
 </html>
