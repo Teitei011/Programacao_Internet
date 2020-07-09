@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Concurso de Fotografia</title>
-<link href="/css/login.css" type="text/css" rel="stylesheet"/>
+<link href="css/login.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body  TEXT="#000000" LINK="#0000ff" bgcolor="#FFFFFF">
