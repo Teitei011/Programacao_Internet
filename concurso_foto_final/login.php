@@ -2,14 +2,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<title>Concurso de Fotografia</title>
-<link href="css/login.css" type="text/css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <title>Concurso de Fotografia</title>
+    <link href="css/login.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
 </head>
 
-<body  TEXT="#000000" LINK="#0000ff" bgcolor="#FFFFFF">
-<BASEFONT SIZE=4>
+<body>
 
     <?php
         $string = "TEstenkdjsahdkljsa" +  date("Y.m.d");
@@ -40,4 +42,5 @@
         $db->close();
     ?>
 </body>
+
 </html>

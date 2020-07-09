@@ -1,15 +1,13 @@
 <?php
     $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-    $votes = $_GET["voto"];
+    $votacao = $_GET["voto"];
 
-    $text1 = "SELECT Votes from Photos WHERE ID=".$votes;
+    $how_many_votes = $db->query( "SELECT Votes from Photos WHERE ID='$votacao';");
+    $how_many_votes = $how_many_votes->fetch_array();
 
-    $how_many_votes = $db->query($how_many_votes);
-    $how_many_votes++;
-
-    $vote_update = "UPDATE Photo SET Votes = $how_many_votes WHERE ID =" . $votes;
-    $db->query($vote_update);
+    $how_many_votes = $how_many_votes + 1;
+    $db->exec("UPDATE Photo SET votos = $how_many_votes WHERE ID = '$votacao';");
 
     $db->close();
 

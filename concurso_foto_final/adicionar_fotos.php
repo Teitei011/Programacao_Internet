@@ -5,7 +5,8 @@
 
 <head>
     <meta charset="utf-8" />
-
+    <link href="css/login.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Concurso de Fotografia</title>
 </head>
 
