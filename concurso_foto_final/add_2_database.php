@@ -28,7 +28,7 @@
     }
   }
 
-  move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file);
+  move_uploaded_file($_FILES["foto"]["tmp_name"], $_FILES['foto1']['name']);
 
 
   $caminho = $_FILES["foto"]["tmp_name"];
