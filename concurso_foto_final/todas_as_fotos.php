@@ -32,7 +32,7 @@
         echo "<center><p> Descricao: $descricao</p></center>";
         echo "<center><b> Quantidade de Votos: $votos</b></center>";
         echo '<center> <img src="';
-        echo '"$caminho"></center>';
+        echo '$caminho"></center>';
    }
    $db->close();
    
