@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Login Page</title>
+    <title>All the photos</title>
     <link href="css/login.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
