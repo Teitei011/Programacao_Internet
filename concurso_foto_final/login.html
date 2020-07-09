@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<title>Login Page</title>
+    <meta charset="utf-8" />
+    <title>Login Page</title>
+    <link href="css/login.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
 </head>
 
-<body background="images/backclass1.gif" bgcolor="#FFFFFF"
-  vlink="#FF0000" alink="#FF00FF" leftmargin="25">
+<body background="images/backclass1.gif" bgcolor="#FFFFFF" vlink="#FF0000" alink="#FF00FF" leftmargin="25">
 
-  <p align="center">&nbsp;</p>
-  <p align="center"><img src="images/titclass.gif" width="250"
-  height="155"></p>
+    <p align="center">&nbsp;</p>
+    <p align="center"><img src="images/titclass.gif" width="250" height="155"></p>
 
-  <p align="center">&nbsp;</p>
+    <p align="center">&nbsp;</p>
 
-    <center> <h1> Login Page </h1></center>
     <center>
-        <form action="/~stefantcleal/concurso_foto_final/login.php" method="GET">
-            Usuário: <input type="text" name="usuario"><br>
-            Senha: <input type="password" name="senha"><br>
-            <input type="submit">
-        </form> 
-    </center>   
+        <h1> Login Page </h1>
+    </center>
+    <center>
+
+        <div id="fullscreen_bg" class="fullscreen_bg">
+
+            <div class="container" action="/~stefantcleal/concurso_foto_final/login.php">
+                <form class="form-signin">
+                    <h1 class="form-signin-heading text-muted">Sign In</h1>
+                    <input type="text" name="usuario" class="form-control" placeholder="Email address" required="" autofocus="">
+                    <input type="password"  name="senha"class="form-control" placeholder="Password" required="">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        Sign In
+                    </button>
+                </form>
+
+            </div>
+
+    </div>
+</center>   
+
 </body>
 
 </html>
