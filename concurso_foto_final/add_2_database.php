@@ -61,8 +61,8 @@
 
   $caminho = $_FILES["foto"]["tmp_name"];
 
-  $db->exec("INSERT INTO  Photo(ID_Artist, titulo, descricao, concurso, votos, caminho, vai_participar) VALUES 
-  ('$ID_Artista', '$titulo', '$descricao', '$concurso', 0, '$caminho', 1);");
+  $db->exec("INSERT INTO  Photo(ID_Artist, titulo, descricao, votos, caminho, vai_participar) VALUES 
+  ('$ID_Artista', '$titulo', '$descricao', 0, '$caminho', 1);");
 	
   $db->close();
 
