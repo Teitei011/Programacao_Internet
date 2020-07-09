@@ -12,7 +12,7 @@
 <html>
 
 <body>
-    <form action="" method="GET">
+    <form action="add_2_database.php" method="GET">
     <p>Concurso a que pertence: 
 
     <select name="concurso">
