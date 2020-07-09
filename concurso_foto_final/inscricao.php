@@ -28,14 +28,13 @@
 <html>
 <head><title>Inscrição</title></head>
 
-<body background="assets/img/backclass1.gif" bgcolor="#FFFFFF"
-  vlink="#FF0000" alink="#FF00FF" leftmargin="25">
+<body>
     <center><h1> Inscrição efetuada com sucesso!</h1>
 
     <p> Dados registrados: </p>
     
     <?php
-      echo "<p>Nome: $nome</p>";
+      echo "<p>Nome: $name</p>";
       echo "<p>Email: $email</p>";
       echo "<p>Senha: $senhaCriptografada</p>";
     ?>
