@@ -13,7 +13,7 @@
   $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
   $senhaCriptografada = sha1($senha);
-  $db->exec("INSERT INTO Artista (nome, email, senha) VALUES ('$name', '$email', '$senhaCriptografada';");
+  $db->exec("INSERT INTO Artista (nome, email, senha) VALUES ('$name', '$email', '$senhaCriptografada');");
   
   $result = $db->query("SELECT ID FROM Artista WHERE nome='$name';");
   $result = $result->fetchArray();
