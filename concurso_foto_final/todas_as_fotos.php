@@ -28,7 +28,7 @@
         $votos = $row['votos'];
         $caminho = $row['caminho'];
 
-        echo "<center><h2> '$titulo'</h2></center>";
+        echo "<center><h2> Titulo: '$titulo'</h2></center>";
         echo "<center><p> '$descricao'</p></center>";
         echo "<center><b> '$votos'</b></center>";
         echo "<center> <img src='$caminho'></center>";
