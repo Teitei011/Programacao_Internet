@@ -8,8 +8,6 @@
 
   $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-
-
 // Upload function
   $target_dir = "assets/upload/";
   $target_file = $target_dir . basename($_FILES["foto"]["name"]);
@@ -32,6 +30,7 @@
 
 
   $caminho = $_FILES["foto"]["tmp_name"];
+  echo "Caminho: $caminho";
 
   $db->exec("INSERT INTO  Photo(ID_Artist, titulo, descricao, votos, caminho, vai_participar) VALUES 
   ('$ID_Artista', '$titulo', '$descricao', 0, '$caminho', 1);");
