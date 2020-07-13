@@ -54,8 +54,8 @@
               </select>
             </p>
             <br>
-            Título: <input type="text" name="titulo"><br>
-            Descricao: <input type="text" name="descricao"><br>
+            Título: <input type="text" id="titulo" name="titulo"><br>
+            Descricao: <input type="text" id="descricao" name="descricao"><br>
             <input type="file" name="foto" id="foto"><br>
             <input type="submit" name="Submit" value="Enviar">
 
