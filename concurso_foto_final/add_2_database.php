@@ -17,7 +17,7 @@
   echo "Caminho: $caminho";
 
   $db->exec("INSERT INTO  Photo(ID_Artist, titulo, descricao, votos, caminho, vai_participar) VALUES 
-  ('$ID_Artista', '$titulo', '$descricao', 0, '$caminho', 1);");
+  ('$ID_Artista', '$titulo', '$descricao', 0, ' $target_file', 1);");
 	
   $db->close();
 
