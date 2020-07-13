@@ -2,9 +2,9 @@
 
   session_start();
 
-  $concurso = $_GET["concurso"];
-  $titulo = $_GET["titulo"];
-  $descricao = $_GET["descricao"];
+  $concurso = $_POST["concurso"];
+  $titulo = $_POST["titulo"];
+  $descricao = $_POST["descricao"];
   $ID_Artista = $_SESSION["id_artista"];
 
   $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
