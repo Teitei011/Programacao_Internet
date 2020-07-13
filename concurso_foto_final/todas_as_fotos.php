@@ -45,7 +45,7 @@
         echo "<p><b> ID: $ID <K/b></p>";
         echo "<b> Quantidade de Votos: $votos</b>";
 
-        echo '<form action="/~stefantcleal/concurso_foto_final/votar.php" method="get">';
+        echo '<form action="/~stefantcleal/concurso_foto_final/votar.php?ID='.$ID.'" method="get">';
             echo '<button name='.$ID.'>Votar</button>';
         echo'</form>';
 
