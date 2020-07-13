@@ -43,7 +43,7 @@
           <hr class="divider my-4" />
         </div>
         <center>
-
+        
         <form action="add_2_database.php" method="POST" enctype="multipart/form-data">
             <p>Concurso a que pertence:
 
