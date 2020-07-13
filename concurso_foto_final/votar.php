@@ -5,8 +5,9 @@
 
     $ID = $_GET["ID"];
 
-    $how_many_votes = $db->query( "SELECT votos from Photo WHERE ID='$ID';");
-    $how_many_votes = $how_many_votes->fetch_array();
+    $query = $db->query( "SELECT * FROM Photo WHERE ID='$ID';");
+    $how_many_votes = $query->fetch_array();
+    $how_many_votes = $how_many_votes["votos"];
 
     $how_many_votes = $how_many_votes + 1;
     $db->exec("UPDATE Photo SET votos = $how_many_votes WHERE ID = '$ID';");
