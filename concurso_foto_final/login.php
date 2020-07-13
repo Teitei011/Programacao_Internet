@@ -30,7 +30,7 @@
             $_SESSION['token'] = $token;
             $_SESSION['artista_id'] = $row["ID"];
 
-            header('adicionar_fotos.php')
+            header('adicionar_fotos.php');
 
 
             echo "<center><h1>Usuário autorizado</h1>";
