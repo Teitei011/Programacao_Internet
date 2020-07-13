@@ -56,11 +56,11 @@
        $caminho = $row['caminho'];
        $ID = $row['ID'];
 
-       echo "<center><h2> Titulo: $titulo</h2></center>";
-       echo "<center><p> Descricao: $descricao</p></center>";
-       echo "<center> <img src='$caminho' width=200 height=200 ></center>";
-       echo "<center><p><b> ID: $ID <K/b></p></center>";
-       echo "<center><b> Quantidade de Votos: $votos</b></center>";
+       echo "<h2> Titulo: $titulo</h2>";
+       echo "<p> Descricao: $descricao</p>";
+       echo " <img src='$caminho' width=200 height=200 >";
+       echo "<p><b> ID: $ID <K/b></p>";
+       echo "<b> Quantidade de Votos: $votos</b>";
 
 
   }
@@ -68,9 +68,9 @@
   
 
 ?>
-                <center>
+                
                     <h2>Coloque aqui a ID da foto que você mais gostou</h2>
-                </center>
+                
                 <form class="form-signin" action="/~stefantcleal/concurso_foto_final/votar.php">
                     <input type="text" name="Id" class="form-control" placeholder="ID" required="" autofocus="">
                     <button class="btn btn-lg btn-primary btn-block" type="submit">
