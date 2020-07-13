@@ -14,7 +14,7 @@
 
 <body>
   <div class="container">
-    <form action="add_2_database.php" method="GET">
+    <form action="add_2_database.php" method="post" enctype="multipart/form-data">
       <p>Concurso a que pertence:
 
         <select name="concurso">
@@ -26,7 +26,7 @@
       <br>
       Título: <input type="text" name=titulo><br>
       Descricao: <input type="text" name=descricao><br>
-      <input type="file" name="foto"><br>
+      <input type="file" name="foto" id="foto"><br>
       <input type="submit" name="Submit" value="Enviar">
 
     </form>
