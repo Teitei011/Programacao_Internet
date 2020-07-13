@@ -42,23 +42,25 @@
           <h1 class="text-uppercase text-white font-weight-bold">Adicionar fotos</h1>
           <hr class="divider my-4" />
         </div>
-        <form action="add_2_database.php" method="post" enctype="multipart/form-data">
-          <p>Concurso a que pertence:
+        <center>
 
-            <select name="concurso">
-              <option value="0" selected>Natureza</option>
-              <option value="1">Pessoas</option>
-              <option value="2">Outros</option>
-            </select>
-          </p>
-          <br>
-          Título: <input type="text" name=titulo><br>
-          Descricao: <input type="text" name=descricao><br>
-          <input type="file" name="foto" id="foto"><br>
-          <input type="submit" name="Submit" value="Enviar">
+        <form action="add_2_database.php" method="post" enctype="multipart/form-data">
+            <p>Concurso a que pertence:
+
+              <select name="concurso">
+                <option value="0" selected>Natureza</option>
+                <option value="1">Pessoas</option>
+                <option value="2">Outros</option>
+              </select>
+            </p>
+            <br>
+            Título: <input type="text" name="titulo"><br>
+            Descricao: <input type="text" name="descricao"><br>
+            <input type="file" name="foto" id="foto"><br>
+            <input type="submit" name="Submit" value="Enviar">
 
         </form>
-
+        </center>
       </div>
     </div>
   </header>
