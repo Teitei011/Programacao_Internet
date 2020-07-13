@@ -46,7 +46,7 @@
         echo "<b> Quantidade de Votos: $votos</b>";
 
         echo '<form action="/~stefantcleal/concurso_foto_final/votar.php?ID='.$ID.'" method="get">';
-            echo' input type="text" name="IDd" id="IDd" value='.$ID.'class="form-control" placeholder="ID" required="" autofocus="">';
+            echo'<input type="text" name="IDd" id="IDd" value='.$ID.'class="form-control" placeholder="ID" required="" autofocus="">';
             echo '<button type="submit" name='.$ID.'>Votar</button>';
         echo'</form>';
 
