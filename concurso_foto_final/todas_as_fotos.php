@@ -42,7 +42,6 @@
         echo "<h2> Titulo: $titulo</h2>";
         echo "<p> Descricao: $descricao</p>";
         echo " <img src='$caminho' width=200 height=200 >";
-        echo "<p><b> ID: $ID <K/b></p>";
         echo "<b> Quantidade de Votos: $votos</b>";
 
         echo '<form action="/~stefantcleal/concurso_foto_final/votar.php?ID='.$ID.'" method="get">';
