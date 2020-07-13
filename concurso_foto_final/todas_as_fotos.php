@@ -30,9 +30,9 @@
 
         echo "<center><h2> Titulo: $titulo</h2></center>";
         echo "<center><p> Descricao: $descricao</p></center>";
-        echo "<center><b> Quantidade de Votos: $votos</b></center>";
-        echo "<center><h1> Caminho da foto: $caminho</center></h1>";
         echo "<center> <img src='$caminho' width=200 height=200 ></center>";
+        echo "<center><b> Quantidade de Votos: $votos</b></center>";
+
    }
    $db->close();
    
