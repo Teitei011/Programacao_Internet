@@ -32,7 +32,8 @@
 
 
             echo "<center><h1>Usuário autorizado</h1>";
-            echo "<a href='todas_as_fotos.php'>Clique nesse link para visualizar os anuncios!</a>";
+            echo "<a href='todas_as_fotos.php'>Clique nesse link para visualizar as fotos!</a>";
+            echo "<a href='adicionar_fotos.php'>Ou clique para adicionar suas fotos!</a>";
 
         } else{
             echo "<center><h1>Senha incorreta</h1>";
