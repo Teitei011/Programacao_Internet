@@ -30,6 +30,8 @@
             $_SESSION['token'] = $token;
             $_SESSION['artista_id'] = $row["ID"];
 
+            header('adicionar_fotos.php')
+
 
             echo "<center><h1>Usuário autorizado</h1>";
             echo "<a href='todas_as_fotos.php'>Clique nesse link para visualizar as fotos!</a>";

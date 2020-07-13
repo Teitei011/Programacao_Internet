@@ -22,23 +22,6 @@
   $_SESSION['id_artista'] = $ID;
 
   $db->close();
+
+  header('adicionar_fotos.php');
 ?> 
-
-
-<html>
-<head><title>Inscrição</title></head>
-
-<body>
-    <center><h1> Inscrição efetuada com sucesso!</h1>
-
-    <p> Dados registrados: </p>
-    
-    <?php
-      echo "<p>Nome: $name</p>";
-      echo "<p>Email: $email</p>";
-      echo "<p>Senha: $senhaCriptografada</p>";
-    ?>
-
-    <p><a href="adicionar_fotos.php">Clique aqui para adicionar as suas fotos</a></p> </center>
-</body>
-</html>
