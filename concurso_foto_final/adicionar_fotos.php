@@ -44,7 +44,7 @@
         </div>
         <center>
 
-        <form action="add_2_database.php" method="post" enctype="multipart/form-data">
+        <form action="add_2_database.php" method="POST" enctype="multipart/form-data">
             <p>Concurso a que pertence:
 
               <select name="concurso">
