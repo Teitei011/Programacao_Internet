@@ -22,35 +22,36 @@
     <link href="css/todas_as_fotos.css" rel="stylesheet" />
 </head>
 
-<body id="page-top">
-   
-                <?php
-  
-  $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+<body>
+   <center>
+<?php
 
-  $photos= $db->query("SELECT * FROM Photo;");
-  
+    $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-  while($row = $photos->fetchArray()) {
-      
-       $titulo = $row['titulo'];
-       $descricao = $row['descricao'];
-       $votos = $row['votos'];
-       $caminho = $row['caminho'];
-       $ID = $row['ID'];
-
-       echo "<h2> Titulo: $titulo</h2>";
-       echo "<p> Descricao: $descricao</p>";
-       echo " <img src='$caminho' width=200 height=200 >";
-       echo "<p><b> ID: $ID <K/b></p>";
-       echo "<b> Quantidade de Votos: $votos</b>";
+    $photos= $db->query("SELECT * FROM Photo;");
 
 
-  }
-  $db->close();
-  
+    while($row = $photos->fetchArray()) {
 
-?>
+        $titulo = $row['titulo'];
+        $descricao = $row['descricao'];
+        $votos = $row['votos'];
+        $caminho = $row['caminho'];
+        $ID = $row['ID'];
+
+        echo "<h2> Titulo: $titulo</h2>";
+        echo "<p> Descricao: $descricao</p>";
+        echo " <img src='$caminho' width=200 height=200 >";
+        echo "<p><b> ID: $ID <K/b></p>";
+        echo "<b> Quantidade de Votos: $votos</b>";
+
+
+    }
+    $db->close();
+
+
+?>  
+
                 
     <h2>Coloque aqui a ID da foto que você mais gostou</h2>
 
@@ -60,9 +61,7 @@
         Submit
     </button>
 </form>
-
-            </div>
-        </div>
+</center>
     </header>
 
     <!-- Bootstrap core JS-->
