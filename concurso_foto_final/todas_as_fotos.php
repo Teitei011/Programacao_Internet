@@ -56,7 +56,7 @@
     <h2>Coloque aqui a ID da foto que você mais gostou</h2>
 
 <form class="form-signin" action="/~stefantcleal/concurso_foto_final/votar.php">
-    <input type="text" name="Id" class="form-control" placeholder="ID" required="" autofocus="">
+    <input type="text" name="ID" id="ID" class="form-control" placeholder="ID" required="" autofocus="">
     <button class="btn btn-lg btn-primary btn-block" type="submit">
         Submit
     </button>
