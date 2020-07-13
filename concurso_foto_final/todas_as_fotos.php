@@ -27,11 +27,14 @@
         $descricao = $row['descricao'];
         $votos = $row['votos'];
         $caminho = $row['caminho'];
-
+        $ID = $row['ID'];
+        
         echo "<center><h2> Titulo: $titulo</h2></center>";
         echo "<center><p> Descricao: $descricao</p></center>";
         echo "<center> <img src='$caminho' width=200 height=200 ></center>";
+        echo "<center><p><b> ID: $ID <K/b></p></center>";
         echo "<center><b> Quantidade de Votos: $votos</b></center>";
+
 
    }
    $db->close();
