@@ -28,7 +28,7 @@
         $votos = $row['votos'];
         $caminho = $row['caminho'];
         $ID = $row['ID'];
-        
+
         echo "<center><h2> Titulo: $titulo</h2></center>";
         echo "<center><p> Descricao: $descricao</p></center>";
         echo "<center> <img src='$caminho' width=200 height=200 ></center>";
@@ -41,3 +41,13 @@
    
 
 ?>
+                    <center><h2>Coloque aqui a ID da foto que você mais gostou</h2></center>
+                    <form class="form-signin" action="/~stefantcleal/concurso_foto_final/votar.php">
+                        <input type="text" name="Id" class="form-control"  placeholder="ID" required="" autofocus="">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Submit
+                        </button>
+                    </form>
+
+</body>
+</html>
