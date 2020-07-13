@@ -18,7 +18,6 @@ if ($row['senha'] == sha1($senha)){
     header("Location: http://fourier.ifsc.usp.br/~stefantcleal/concurso_foto_final/adicionar_fotos.php", true, 301);
 } else{
     header("Location: http://fourier.ifsc.usp.br/~stefantcleal/concurso_foto_final/login.html", true, 301);
-
 }
 
 $db->close();
