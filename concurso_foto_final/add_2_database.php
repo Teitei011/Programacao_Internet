@@ -21,6 +21,6 @@
 	
   $db->close();
 
-    header('concurso_foto_final/todas_as_fotos.php');
+  header("Location: http://fourier.ifsc.usp.br/~stefantcleal/concurso_foto_final/todas_as_fotos.php", true, 301);
   
 ?>

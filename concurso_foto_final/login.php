@@ -30,7 +30,8 @@
             $_SESSION['token'] = $token;
             $_SESSION['artista_id'] = $row["ID"];
 
-            header('adicionar_fotos.php');
+            header("Location: http://fourier.ifsc.usp.br/~stefantcleal/concurso_foto_final/adicionar_fotos.php", true, 301);
+
 
 
             echo "<center><h1>Usuário autorizado</h1>";

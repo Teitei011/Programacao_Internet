@@ -23,5 +23,6 @@
 
   $db->close();
 
-  header('adicionar_fotos.php');
+  header("Location: http://fourier.ifsc.usp.br/~stefantcleal/concurso_foto_final/adicionar_fotos.php", true, 301);
+
 ?> 
