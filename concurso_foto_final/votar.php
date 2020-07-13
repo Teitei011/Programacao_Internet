@@ -5,7 +5,7 @@
 
     $ID = $_GET["ID"];
 
-    $how_many_votes = $db->query( "SELECT Votes from Photos WHERE ID='$ID';");
+    $how_many_votes = $db->query( "SELECT Votes from Photo WHERE ID='$ID';");
     $how_many_votes = $how_many_votes->fetch_array();
 
     $how_many_votes = $how_many_votes + 1;
