@@ -3,7 +3,7 @@
 
     $db = new SQLite3('database.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-    $ID = $_GET["ID"];
+    $ID = $_GET["IDd"];
 
     $query = $db->query( "SELECT * FROM Photo WHERE ID='$ID';");
     $how_many_votes = $query->fetchArray();

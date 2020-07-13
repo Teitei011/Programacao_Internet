@@ -45,8 +45,8 @@
         echo "<p><b> ID: $ID <K/b></p>";
         echo "<b> Quantidade de Votos: $votos</b>";
 
-        echo '<form action="/~stefantcleal/concurso_foto_final/votar.php?ID='.$ID.'" method="get">';
-            echo '<button name='.$ID.'>Votar</button>';
+        echo '<form action="/~stefantcleal/concurso_foto_final/votar.php?IDd='.$ID.'" method="get">';
+            echo '<button type="submit" name='.$ID.'>Votar</button>';
         echo'</form>';
 
 
@@ -60,7 +60,7 @@
     <h2>Coloque aqui a ID da foto que você mais gostou</h2>
 
 <form class="form-signin" action="/~stefantcleal/concurso_foto_final/votar.php">
-    <input type="text" name="ID" id="ID" class="form-control" placeholder="ID" required="" autofocus="">
+    <input type="text" name="IDd" id="IDd" class="form-control" placeholder="ID" required="" autofocus="">
     <button class="btn btn-lg btn-primary btn-block" type="submit">
         Submit
     </button>
