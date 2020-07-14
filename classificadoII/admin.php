@@ -37,15 +37,15 @@
   
 
       $ID = $row["ID"];
-      echo "<form action='./delete_anuncios.php?ID=$ID' method='GET'>
-      <p> <input type='submit' value='Delete'> </p>
-    </form>";
+      echo "<form action='./delete_anuncios.php method='GET'>";
+      echo'<input type="hidden" name="ID" id="ID" value="'.$ID.'" required="" autofocus="">';
+      echo "<p> <input type='submit' value='Delete'> </p></form>";
 
-    echo "<form action='./edit_one_anuncio.php?ID=$ID' method='GET'>
-    <p> <input type='submit' value='Edit'> </p>
-  </form>";
+      echo "<form action='./edit_one_anuncio.php?ID=$ID' method='GET'>";
+      echo'<input type="hidden" name="ID" id="ID" value="'.$ID.'" required="" autofocus="">';
+      echo "<p> <input type='submit' value='Edit'> </p></form>";
+ 
     }
-
   
   }
   echo "<hr>";
@@ -55,18 +55,6 @@
   
 ?>
 
-
-<h2> Excluir </h2>
-  <form action="./delete_anuncios_admin.php" method="GET"> 
-    ID: <input type="text" name="ID"><br>
-    <input type='submit'>
-  </form>
-
-  <h2>Editar </h2>
-  <form action="./edit_one_anuncio.php" method="GET"> 
-      ID: <input type="text" name="ID"><br>
-      <input type='submit'>
-  </form>
 
   </center>    
 </body>
