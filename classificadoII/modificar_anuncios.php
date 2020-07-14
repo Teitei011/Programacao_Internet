@@ -46,16 +46,17 @@
     $result = $db->query("SELECT * FROM Anuncio WHERE Anunciante = ".$ID_ANUNCIANTE.";");
     echo "<h2> Anuncios: </h2>";
     while($row = $result->fetchArray()){
-      echo "<p><h3><b><I><center> ".$row["titulo"]."  -- ID: ".$row["ID"]."</center></i></b></h3><br>";
+      $ID = $row["ID"];
+      echo "<p><h3><b><I><center> ".$row["titulo"]."  -- ID: ".$ID ."</center></i></b></h3><br>";
       echo "<p>".$row["descricao"]."</p><br>";
 
-      echo "<form action='./delete_anuncios.php' method='POST'>
-            <p> <input type='submit' value='Delete'> </p>
-          </form>";
+      echo "<form action='./delete_anuncios.php' method='POST'>";
+      echo'<input type="hidden" name="ID" id="ID" value="'.$ID .'" required="" autofocus="">';
+      echo"  <p> <input type='submit' value='Delete'> </p></form>";
 
-      echo "<form action='./edit_one_anuncio.php' method='POST'>
-      <p> <input type='submit' name='ID' value=Edit> </p>
-          </form>";
+      echo "<form action='./edit_one_anuncio.php' method='POST'>";
+      echo'<input type="hidden" name="ID" id="ID" value="'.$ID .'" required="" autofocus="">';
+      echo " <p> <input type='submit' name='ID' value=Edit> </p> </form>";
     }
   }
   echo "<hr>";
@@ -63,21 +64,6 @@
   $db->close();
 ?>
 
-  <center> <h2> Excluir </h2>
-  <form action="./delete_anuncios.php" method="GET"> 
-    ID: <input type="text" name="ID"><br>
-    <input type='submit'>
-  </form>
-
-  <h2>Editar </h2>
-  <form action="./edit_one_anuncio.php" method="GET"> 
-      ID: <input type="text" name="ID"><br>
-      <input type='submit'>
-  </form>
-
-  
-
-  </center>
 
 
 </body>
